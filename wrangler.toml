@@ -12,15 +12,15 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-# routes = [
-#   { pattern = "docker.cdunix.fun", custom_domain = true },
-#   { pattern = "quay.cdunix.fun", custom_domain = true },
-#   { pattern = "gcr.cdunix.fun", custom_domain = true },
-#   { pattern = "k8s-gcr.cdunix.fun", custom_domain = true },
-#   { pattern = "k8s.cdunix.fun", custom_domain = true },
-#   { pattern = "ghcr.cdunix.fun", custom_domain = true },
-#   { pattern = "cloudsmith.cdunix.fun", custom_domain = true },
-# ]
+routes = [
+  { pattern = "docker.cdunix.fun", custom_domain = true },
+  { pattern = "quay.cdunix.fun", custom_domain = true },
+  { pattern = "gcr.cdunix.fun", custom_domain = true },
+  { pattern = "k8s-gcr.cdunix.fun", custom_domain = true },
+  { pattern = "k8s.cdunix.fun", custom_domain = true },
+  { pattern = "ghcr.cdunix.fun", custom_domain = true },
+  { pattern = "cloudsmith.cdunix.fun", custom_domain = true },
+]
 
 [env.production.vars]
 MODE = "production"
