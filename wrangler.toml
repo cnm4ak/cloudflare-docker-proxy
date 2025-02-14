@@ -7,7 +7,7 @@ port = 8787
 local_protocol = "http"
 
 [env.vars]
-CUSTOM_DOMAIN = "libcuda.so"
+CUSTOM_DOMAIN = "cdunix.fun"
 
 [env.dev.vars]
 MODE = "debug"
@@ -24,7 +24,15 @@ name = "cloudflare-docker-proxy"
 #   { pattern = "ghcr.libcuda.so", custom_domain = true },
 #   { pattern = "cloudsmith.libcuda.so", custom_domain = true },
 # ]
-
+routes = [
+  { pattern = "docker.cdunix.fun", custom_domain = true },
+  { pattern = "quay.cdunix.fun", custom_domain = true },
+  { pattern = "gcr.cdunix.fun", custom_domain = true },
+  { pattern = "k8s-gcr.cdunix.fun", custom_domain = true },
+  { pattern = "k8s.cdunix.fun", custom_domain = true },
+  { pattern = "ghcr.cdunix.fun", custom_domain = true },
+  { pattern = "cloudsmith.cdunix.fun", custom_domain = true },
+]
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
